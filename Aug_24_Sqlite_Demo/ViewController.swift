@@ -12,7 +12,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var dbHelper = DBHelper()
+        DBHelper.shared.insertDataIntoTable(rNumber: 10, name: "Aniket")
+        DBHelper.shared.insertDataIntoTable(rNumber: 11, name: "Pallavi")
+        DBHelper.shared.insertDataIntoTable(rNumber: 12, name: "Suhaan")
         
+        DBHelper.shared.deleteDataFromTable(rn: 11)
     }
 }
